@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  
+  <view class="section">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        当前城市：{{array[index]}}<text wx:if="{{condition}}">点击选择</text>
+      </view>
+    </picker>
+  </view>
+  <view bindtap="bindCityTap" class="city">
+    <image wx:if="{{array[index]=='沈阳'}}" src="{{img.sy}}"></image>
+    <image wx:if="{{array[index]=='大连'}}" src="{{img.dl}}"></image>
+    <image wx:if="{{array[index]=='哈尔滨'}}" src="{{img.heb}}"></image>
+    <image wx:if="{{array[index]=='上海'}}" src="{{img.sh}}"></image>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  
+</view>

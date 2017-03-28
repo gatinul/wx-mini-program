@@ -1,0 +1,13 @@
+
+<view class="container">
+<text>所在城市：{{cityInfo}}</text>
+
+</view>
+<swiper class="citySwiper" indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}"> 
+  <block wx:key="{{item}}" wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" mode="aspectFit" class="slide-image" width="400" height="200"/>
+    </swiper-item>
+  </block>
+</swiper>
